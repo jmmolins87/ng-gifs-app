@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CardListComponent {
 
+  public gifs: any[] = [{
+    title: 'Gif 1',
+  }];
+
 }

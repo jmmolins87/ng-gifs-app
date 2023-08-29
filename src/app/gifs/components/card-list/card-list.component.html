@@ -1,3 +1,11 @@
-<div class="mt-3">
-    <p>Test text</p>
+<div class="row mt-4">
+    <div class="col-md-4 col-sm-6">
+        <ng-container *ngFor="let gif of gifs">
+            <div class="card mt-2 text-center text-light bg-dark">
+                <div class="card-body">
+                    <p class="card-text">{{ gif.title }}</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
 </div>

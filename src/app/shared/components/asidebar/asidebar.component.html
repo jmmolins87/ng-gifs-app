@@ -1,7 +1,11 @@
 <div class="bg-dark text-light p-3 h-100vh">
-    <h3>Buscar</h3>
+    <h3>{{ titleApp }}</h3>
     <hr>
     <ul class="list-group">
-        <li class="list-group-item"><button>Valored</button></li>
+        <ng-container *ngFor="let gif of newGif">
+            <li class="list-group-item">
+                <button class="text-start">{{ gif | titlecase }}</button>
+            </li>
+        </ng-container>
     </ul>
 </div>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { GifsService } from '../../../gifs/services/gifs.service';
 
 @Component({
   selector: 'shared-asidebar',
@@ -7,5 +9,14 @@ import { Component } from '@angular/core';
   ]
 })
 export class AsidebarComponent {
+  
+  @Input()  
+  public titleApp: string = 'Gifs App'; 
+  
+  constructor( private _gifsService: GifsService ) { }
+
+  public get newGif() {
+    return this._gifsService.tagsHistory;
+  }
 
 }

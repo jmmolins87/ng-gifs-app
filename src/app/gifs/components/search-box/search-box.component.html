@@ -1,6 +1,8 @@
-<h3>Buscar</h3>
+<h3>{{ titlePage }}</h3>
 <hr>
 <input 
     type="text" 
-    placeholder="Buscar gifs" 
+    [placeholder]="'Busque su gifs...'" 
+    (keyup.enter)="searchTag()"
+    #txtInputSearch
     class="form-control">
