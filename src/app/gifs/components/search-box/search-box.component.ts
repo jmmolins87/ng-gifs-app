@@ -26,6 +26,7 @@ export class SearchBoxComponent {
 
   searchTag() {
     const newTag: string = this.tagInput.nativeElement.value;
+    // Si el tag esta vacio, no hacemos nada
     this._gifsService.searchTag( newTag );
     // Limpiamos el input
     this.tagInput.nativeElement.value = '';

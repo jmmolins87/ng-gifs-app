@@ -1,10 +1,10 @@
-<div class="bg-dark text-light p-3 h-100vh">
+<div class="bg-dark text-light p-3 h-100vh sticky-top-0">
     <h3>{{ titleApp }}</h3>
     <hr>
     <ul class="list-group">
-        <ng-container *ngFor="let gif of newGif">
+        <ng-container *ngFor="let gif of newGif" >
             <li class="list-group-item">
-                <button class="text-start">{{ gif | titlecase }}</button>
+                <button (click)="searchOldTag( gif )" class="text-start">{{ gif | titlecase }}</button>
             </li>
         </ng-container>
     </ul>

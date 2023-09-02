@@ -1,8 +1,10 @@
-<h3>{{ titlePage }}</h3>
-<hr>
-<input 
-    type="text" 
-    [placeholder]="'Busque su gifs...'" 
-    (keyup.enter)="searchTag()"
-    #txtInputSearch
-    class="form-control">
+<div class="wrap-search-box p-3">
+    <h3>{{ titlePage }}</h3>
+    <hr>
+    <input 
+        type="text" 
+        [placeholder]="'Busque su gifs...'" 
+        (keyup.enter)="searchTag()"
+        #txtInputSearch
+        class="form-control">
+</div>
