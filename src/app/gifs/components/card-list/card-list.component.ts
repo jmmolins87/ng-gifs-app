@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
+import { 
+  Component, 
+  Input, 
+  Output 
+} from '@angular/core';
 import { GifsService } from '../../services/gifs.service';
+import { Gif } from '../../interfaces/gifs.interface';
 
 @Component({
   selector: 'gifs-card-list',
@@ -9,14 +14,14 @@ import { GifsService } from '../../services/gifs.service';
 })
 export class CardListComponent {
 
-  public gifs: any[] = [{
-    title: 'Gif 1',
-  }];
-
   constructor( private _gifsService: GifsService ) { }
 
+  @Input()
+  gif: Gif[] = [];
+
+  @Output()
   get showGifsResponse() {
     return this._gifsService.myGifsSearches;
-  } 
+  }
 
 }

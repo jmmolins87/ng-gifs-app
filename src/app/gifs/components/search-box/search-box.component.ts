@@ -14,11 +14,14 @@ import { GifsService } from '../../services/gifs.service';
 })
 export class SearchBoxComponent {
 
+  // @Input() nos permite recibir propiedades desde el componente padre
   @Input()
   public titlePage: string = 'Buscar Gifs';
+
   @Input()
   public placeholder: string = '';
 
+  // ViewChild nos permite obtener una referencia a un elemento del DOM
   @ViewChild('txtInputSearch') 
   tagInput!: ElementRef<HTMLInputElement>;
 

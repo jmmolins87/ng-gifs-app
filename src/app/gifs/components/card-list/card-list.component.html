@@ -1,15 +1,10 @@
 <div class="row mt-4">
     <ng-container *ngFor="let gif of showGifsResponse">
-        <div class="col-md-4 col-sm-6 align-strech">
-            <div class="card mt-2 text-center text-light bg-dark w-100">
-                <div class="card-body">
-                    <img 
-                        [src]="gif.images.downsized_medium.url" 
-                        class="card-img-top" 
-                        [alt]="gif.title">
-                    <p class="card-text mt-20">{{ gif.title }}</p>
-                </div>
-            </div>
+        <div class="col-md-4 col-sm-6  align-strech">
+            <gifs-card 
+                [gif]="gif"
+                class=" align-strech w-100">
+            </gifs-card>
         </div>
     </ng-container>
 </div>

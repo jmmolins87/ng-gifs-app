@@ -1,7 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-
 import { Gif, ResponseGifs } from '../interfaces/gifs.interface';
 
 @Injectable({
@@ -54,7 +53,7 @@ export class GifsService {
     // JSON.parse() convierte un string a un objeto
     this._tagsHistory = JSON.parse(localStorage.getItem('history')! ); 
     // Si el arreglo esta vacio no hacemos nada
-    if( this._tagsHistory.length = 0 ) return;
+    if( this._tagsHistory.length === 0 ) return;
     // Si el arreglo tiene elementos, buscamos el primero
     this.searchTag( this._tagsHistory[0] );
   }
