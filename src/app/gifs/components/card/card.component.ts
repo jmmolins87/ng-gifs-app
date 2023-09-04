@@ -15,9 +15,5 @@ export class CardComponent {
 
   @Input()
   public gif!: Gif;
-
-  // ngOnInit(): void {
-  //   if( this.gif) throw new Error('Gif is required');
-  // }
-
+  
 }
