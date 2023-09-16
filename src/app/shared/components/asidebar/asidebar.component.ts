@@ -19,9 +19,6 @@ export class AsidebarComponent {
     return this._gifsService.tagsHistory;
   }
 
-  // searchOldTag( tag: string ) {
-  //   this._gifsService.searchTag( tag );
-  // }
   searchOldTag( tag: string ) {
     this._gifsService.searchTag( tag );
   }
